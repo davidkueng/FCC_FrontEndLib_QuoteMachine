@@ -1,29 +1,42 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>quote machine</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="quotes.css" />
-    <script src="quotes.js"></script>
+<head>      
+    <title>FFC Random Quote Machine</title>     
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.3.1/dist/semantic.min.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="quotes.css" /> 
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>             
+    <script src="quotes.js"></script> 
 </head>
-<body>
-    
-    <div id="quote-box">
-        <p id="text">
+<body>  
 
-        </p>
-
-        <p id="author"></p>
-
-        <button id="new-quote"></button>
-
-        <p id="tweet-quote"></p>
-
-    </div>
-
-
-
+        <div class="ui main text container" id="quote-box">
+            <h1>Random Quote Machine</h1>                          
+                <div class="ui raised very padded text fluid container segment">                                        
+                        <div id="text"></div>
+                        <div id="author" class="text"></div>                                              
+                </div>  
+                <div class="ui grid">
+                    <div class="two column row">
+                        <div class="right floated column">
+                            <button class="ui black button" id="new-quote">New Quote</button>
+                        </div>
+                        <div class="left floated column">                                                                                          
+                            <a class="ui circular twitter icon button right floated"                                    
+                                    id="tweet-quote">
+                                    <!-- href="twitter.com/intent/tweet"
+                                    target="_blank">                                             -->
+                                <i class="twitter icon"></i>
+                            click to tweet</a>                                                  
+                        </div>
+                    </div>                   
+                    <p id="credits">Quotes from <a href="http://quotes.stormconsultancy.co.uk" target="_blank">stormconsultancy.co.uk</a></p>                    
+                </div>
+        </div>  
 </body>
+
+
 </html>
+
+
+
