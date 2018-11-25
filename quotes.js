@@ -1,31 +1,16 @@
-
-$(document).ready( () => { 
-
-let quotesURL = "http://quotes.stormconsultancy.co.uk/random.json";   
+let quotesURL = "https://talaikis.com/api/quotes/random/";   
 
 let getQuote = () => {
                     $.getJSON(quotesURL, (json) => {
-                        $("#text").html(JSON.stringify = `${json.quote}`);
-                        $("#author").html(JSON.stringify = "- " + `${json.author}`);
+                        $("#text").html(`${json.quote}`);
+                        $("#author").html("- " + `${json.author}`);
+                        $('#tweet-quote').attr('href', "https://twitter.com/intent/tweet?url=&text=" + `${json.quote}`
+                         + ' - ' + `${json.author}`)
                         });
                     }
-
-let clickToTweet = () => { 
-                    let quoteContent = $("#text").html(); 
-                    window.open("http://twitter.com/intent/tweet?url=&text=" 
-                    + quoteContent); 
-                    };  
-
-
     getQuote();
-        //tweet quote
-        $("#tweet-quote").on("click", clickToTweet) 
-       
-        //show next quote                        
-        $("#new-quote").on("click", getQuote) 
-                      
-})       
-
-
+                              
+    $("#new-quote").on("click", getQuote) 
+                   
 
 
