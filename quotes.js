@@ -5,7 +5,7 @@ let getQuote = () => {
                         $("#text").html(`${json.quote}`);
                         $("#author").html("- " + `${json.author}`);
                         $('#tweet-quote').attr('href', "https://twitter.com/intent/tweet?url=&text=" + `${json.quote}`
-                         + ' - ' + `${json.author}`)
+                         + ' - ' + `${json.author}`);
                         });
                     }
     getQuote();
